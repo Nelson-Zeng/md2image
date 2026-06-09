@@ -1,0 +1,12 @@
+name: md2image
+display_name: MD自动转图片
+author: astrbot
+version: "1.0.0"
+desc: |-
+  自动检测 AI 回复中的 Markdown 格式（列表、加粗、表格、代码块等），
+  使用 Playwright + Chromium 渲染为高清图片，解决 QQ 无法渲染 MD 的问题。
+  同时支持 /md2img 命令手动转换。
+plugin_type: basic
+support_platforms:
+  - aiocqhttp
+short_desc: Markdown自动转图片，使用Chromium渲染
