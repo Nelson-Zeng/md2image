@@ -204,16 +204,16 @@ body[data-theme="gold"] {
 body{
     font-family:"Microsoft YaHei","PingFang SC","Hiragino Sans GB",
                 -apple-system,BlinkMacSystemFont,sans-serif;
-    font-size:15px;line-height:1.85;color:#3d3d3d;
+    font-size:17px;line-height:1.85;color:#3d3d3d;
     background: var(--bg);
-    max-width:680px;
-    padding:32px 36px 24px 44px;
+    max-width:100%;
+    padding:24px 20px 20px 28px;
     position:relative;
 }
 
 /* ── 左侧装订线 ── */
 body::before{
-    content:"";position:fixed;top:0;left:22px;bottom:0;width:2px;
+    content:"";position:fixed;top:0;left:14px;bottom:0;width:2px;
     background: repeating-linear-gradient(
         to bottom,
         var(--bind-line) 0px, var(--bind-line) 8px,
@@ -257,16 +257,16 @@ body::after{
 /* ── 标题 ── */
 h1,h2,h3,h4,h5,h6{color:var(--heading);font-weight:700;margin-top:1.5em;margin-bottom:.45em;position:relative}
 h1{
-    font-size:1.55em;padding:6px 14px;margin-left:-8px;
+    font-size:1.45em;padding:6px 12px;margin-left:-6px;
     background: var(--heading-bg);
     border-left:4px solid var(--h1-border);
     border-radius:0 6px 6px 0;
 }
-h2{font-size:1.28em;color:var(--h2-color);padding-bottom:4px;
+h2{font-size:1.22em;color:var(--h2-color);padding-bottom:4px;
    border-bottom:2px dashed var(--h2-line)}
-h3{font-size:1.1em;color:var(--accent)}
+h3{font-size:1.08em;color:var(--accent)}
 h3::before{content:var(--h3-prefix);color:var(--accent-light);font-size:.75em;position:relative;top:-2px}
-p{margin:.7em 0}
+p{margin:.65em 0}
 
 /* ── 文本样式 ── */
 strong{color:var(--strong);font-weight:700}
@@ -276,7 +276,7 @@ del{text-decoration:line-through;color:#b0b0b0}
 /* ── 行内代码 ── */
 code{
     background:var(--code-bg);color:var(--code-text);
-    padding:2px 8px;border-radius:6px;font-size:.9em;
+    padding:2px 7px;border-radius:6px;font-size:.88em;
     font-family:"Cascadia Code","Fira Code","JetBrains Mono",Consolas,monospace;
     border:1px solid var(--code-border);
 }
@@ -284,8 +284,8 @@ code{
 /* ── 代码块 ── */
 pre{
     background:var(--pre-bg);color:var(--pre-text);
-    padding:18px 22px;border-radius:10px;overflow-x:auto;
-    margin:1em 0;line-height:1.65;
+    padding:14px 16px;border-radius:10px;overflow-x:auto;
+    margin:1em 0;line-height:1.65;font-size:.85em;
     border:2px solid var(--pre-border);
     box-shadow:0 2px 8px rgba(0,0,0,.08);
 }
@@ -295,24 +295,24 @@ pre code{background:none;color:inherit;padding:0;font-size:.88em;border:none}
 blockquote{
     border-left:4px solid var(--quote-border);
     background: var(--quote-bg);
-    margin:1em 0;padding:14px 18px;color:var(--quote-color);
-    border-radius:0 10px 10px 0;position:relative;
+    margin:1em 0;padding:12px 14px;color:var(--quote-color);
+    border-radius:0 10px 10px 0;position:relative;font-size:.95em;
 }
 blockquote::before{
-    content:"❝";font-size:2em;color:var(--quote-mark);
+    content:"❝";font-size:1.8em;color:var(--quote-mark);
     position:absolute;top:-8px;left:6px;opacity:.6;
 }
 
 /* ── 表格 ── */
-table{border-collapse:collapse;width:100%;margin:1em 0;font-size:.95em;
+table{border-collapse:collapse;width:100%;margin:1em 0;font-size:.92em;
       border-radius:8px;overflow:hidden;box-shadow:0 1px 6px rgba(0,0,0,.05)}
-th,td{border:1px solid var(--table-border);padding:10px 16px;text-align:left}
+th,td{border:1px solid var(--table-border);padding:8px 12px;text-align:left}
 th{background:var(--table-th-bg);font-weight:700;color:var(--table-th-color)}
 tr:nth-child(even) td{background:var(--table-even)}
 
 /* ── 列表 ── */
-ul,ol{padding-left:1.5em;margin:.55em 0}
-li{margin:.4em 0}
+ul,ol{padding-left:1.4em;margin:.55em 0}
+li{margin:.35em 0}
 ul>li::marker{color:var(--ul-marker)}
 ol>li::marker{color:var(--ol-marker);font-weight:600}
 li p{display:inline}
@@ -333,12 +333,12 @@ img{max-width:100%;border-radius:10px;margin:.7em 0;border:2px solid var(--accen
 
 /* ── 页脚 ── */
 .page-footer{
-    margin-top:24px;padding-top:16px;
-    text-align:center;font-size:12px;color:var(--footer-text);
+    margin-top:20px;padding-top:14px;
+    text-align:center;font-size:11px;color:var(--footer-text);
     border-top:1px dashed var(--footer-line);
     display:flex;align-items:center;justify-content:center;gap:8px
 }
-.page-footer .dot{width:6px;height:6px;border-radius:50%;display:inline-block}
+.page-footer .dot{width:5px;height:5px;border-radius:50%;display:inline-block}
 .page-footer .dot:nth-child(1){background:var(--footer-dot1)}
 .page-footer .dot:nth-child(2){background:var(--footer-dot2)}
 .page-footer .dot:nth-child(3){background:var(--footer-dot3)}
@@ -358,7 +358,7 @@ class Main(Star):
         self._browser_lock = asyncio.Lock()
 
         self.min_length: int = 60
-        self.viewport_width: int = 720
+        self.viewport_width: int = 480
         self.device_scale_factor: float = 2.0
 
         self.md_patterns: list[tuple[str, str]] = [
