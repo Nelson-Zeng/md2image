@@ -422,10 +422,9 @@ class Main(Star):
             return False
         match_count = 0
         for pattern, _ in self.md_patterns:
-            if re.search(pattern, text, re.MULTILINE):
-                match_count += 1
-                if match_count >= 2:
-                    return True
+            match_count += len(re.findall(pattern, text, re.MULTILINE))
+            if match_count >= 2:
+                return True
         return False
 
     # ── HTML 构建 ───────────────────────────────────────────
