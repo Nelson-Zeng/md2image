@@ -10,3 +10,4 @@ plugin_type: basic
 support_platforms:
   - aiocqhttp
 short_desc: Markdown自动转图片，使用Chromium渲染
+repo: https://github.com/Nelson-Zeng/md2image
